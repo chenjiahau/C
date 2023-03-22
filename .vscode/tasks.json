@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "Build C++ By GCC",
+      "command": "/opt/homebrew/bin/g++-12",
+      "args": [
+        "-g",
+        "-std=c++20",
+        "${workspaceFolder}/*.cpp",
+        "-o",
+        "${fileDirname}/rooster"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "編譯器: /opt/homebrew/bin/g++-12"
+    },
+    {
+      "type": "cppbuild",
+      "label": "Build C++ By Clang",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-g",
+        "-std=c++20",
+        "${workspaceFolder}/*.cpp",
+        "-o",
+        "${fileDirname}/rooster"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "編譯器: /usr/bin/clang++"
+    }
+  ]
+}
